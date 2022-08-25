@@ -17,7 +17,7 @@ if(empty($uname)){
     header ("Location: login.php?error=Username is required");
     exit();
 }
-else if(empty($pass) || (strlen(pass) < 5)){  //Pass is empty OR does not meet length requirements, it automatically is invalid -> No need to connect to DB
+else if(empty($pass) || (strlen($pass) < 4)){  //Pass is empty OR does not meet length requirements, it automatically is invalid -> No need to connect to DB
     header ("Location: login.php?error=Password is invalid");
     exit();
 }
