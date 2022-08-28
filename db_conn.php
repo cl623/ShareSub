@@ -1,12 +1,11 @@
 <?php
 
     require "../configs/config.php";
-//	header("Location: login.php?error=".$host);
-    //$conn = mysqli_connect($host, $db_uname, $db_password, $db_logins)
+    //function $connect($table){} //f(table name) -> php can pass the table name and reuse this function to make a connection 
     try{
-	$conn = new PDO($dsn, $db_uname, $db_password);
+	    $conn = new PDO($dsn, $db_uname, $db_password);
     }catch(PDOException $e){
-	header("Location: login.php?error=Connection Error".$e->getMessage());
+	    header("Location: login.php?error=Connection Error".$e->getMessage());
 	exit();
     }
 ?>
