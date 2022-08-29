@@ -20,7 +20,7 @@ form.addEventListener('submit', function(e){
         isConfirmPasswordValid;
 
     if(isFormValid){
-        
+        document.getElementById('signup').submit();
     }
 });
 
